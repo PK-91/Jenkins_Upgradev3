@@ -12,6 +12,9 @@ pipeline {
                     echo "Job Name: $jobName"
                     echo "Build Number: $buildNumber"
 
+                    // Use the correct dotnet binary
+                    sh '/usr/share/dotnet/dotnet --info'
+
                     // Use them in shell commands
                     sh 'docker --version'
                     sh 'dotnet --info'
